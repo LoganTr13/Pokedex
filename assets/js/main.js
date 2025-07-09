@@ -8,29 +8,29 @@ let offset = 0;
 function renderPokemon(pokemon)
 {
     return `
-    <li class="pokemon ${pokemon.type}">
-        <span class="number">#${pokemon.id}</span>
-        <span class="name">${pokemon.name}</span>
-        
-        <div class="detail">
+    <li class="pokemon">
+          <header class="headerPokemon">
+            <span class="name">${pokemon.name}</span>
+            <span class="number">#${pokemon.id}</span>
+          </header>
+
+          <div class="detail">
+            <img src="${pokemon.img}" alt="${pokemon.name}" />
             <ol class="types">
                 ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
             </ol>
-        
-            <img src="${pokemon.img}"
-                    alt="${pokemon.name}">
-        </div>
-        <div class="baseStat">
+          </div>
+          <div class="baseStat">
             <ul>
-                <li>HP: ${pokemon.hp}</li>
-                <li>Atk: ${pokemon.atk}</li>
-                <li>Def: ${pokemon.def}</li>
-                <li>Sp.Atk: ${pokemon.spAtk}</li>
-                <li>Sp.Def: ${pokemon.spDef}</li>
-                <li>Speed: ${pokemon.spd}</li>
+              <li>HP: <i>${pokemon.hp}</i></li>
+                <li>Atk: <i>${pokemon.atk}</i></li>
+                <li>Def: <i>${pokemon.def}</i></li>
+                <li>Sp.Atk: <i>${pokemon.spAtk}</i></li>
+                <li>Sp.Def: <i>${pokemon.spDef}</i></li>
+                <li>Speed: <i>${pokemon.spd}</i></li>
             </ul>
-        <div>
-    </li>
+          </div>
+        </li>
 `
 }
 console.log(pokeApi.getPokemons(0,5))

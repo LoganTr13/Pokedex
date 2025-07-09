@@ -3,27 +3,20 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #520e0e;
+header{
+    background-color: #dd1234;
+    height: 3rem;
+    padding: 1rem;
 }
-h1 {
-    text-transform: uppercase;
-    color:rgb(104, 215, 215);
-    text-align:center;
-}
-
 .content {
-    width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: rgb(126, 22, 22);
+    background-color: rgb(235, 235, 235);
 }
 
 @media screen and (min-width: 992px) {
     .content {
-        max-width: 992px;
         height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
+        margin: .4rem 5em;
     }
 }
